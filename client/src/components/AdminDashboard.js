@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchJobApplications = async () => {
       try {
-        const response = await axios.get("http://66.29.135.15:5000/api/admin/dashboard");
+        const response = await axios.get("http://localhost:5000/api/admin/dashboard");
         setJobApplications(response.data);
       } catch (error) {
         console.error("Error fetching job applications:", error);

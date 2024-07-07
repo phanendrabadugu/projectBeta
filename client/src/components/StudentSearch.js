@@ -52,7 +52,7 @@ const StudentSearch = () => {
 
   const fetchNearbyAddresses = async (lat, lng, distance) => {
     try {
-      const response = await axios.get('http://66.29.135.15:5000/studentSearch', {
+      const response = await axios.get('http://localhost:5000/studentSearch', {
         params: { lat, lng, distance }
       });
       setNearbyAddresses(response.data);

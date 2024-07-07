@@ -48,7 +48,7 @@ const ApplicationForm = ({ isOpen, onClose, selectedRestaurant, jobPosts }) => {
 
     try {
       const response = await axios.post(
-        "http://66.25.135.15:5000/submitJobApplication",
+        "http://localhost:5000/submitJobApplication",
         {
           ...formData,
           selectedRestaurantId: selectedRestaurant._id,
