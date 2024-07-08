@@ -35,7 +35,7 @@ const RestaurantForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/restaurantForm', formData);
+      const response = await axios.post('http://localhost:5000/api/restaurantForm', formData);
       console.log(response.data)
       alert('Restaurant added successfully');
       setFormData(initialFormData); // Reset to initial form structure

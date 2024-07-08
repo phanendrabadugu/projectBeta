@@ -95,7 +95,7 @@ addressSchema.index({ "address.location": "2dsphere" });
 const Address = mongoose.model("Address", addressSchema);
 
 // API route to handle form submissions
-app.post("/restaurantForm", async (req, res) => {
+app.post("/api/restaurantForm", async (req, res) => {
   const { name, street, city, state, zip, jobPosts } = req.body;
 
   try {
@@ -134,7 +134,7 @@ app.post("/restaurantForm", async (req, res) => {
   }
 });
 
-app.post("/submitJobApplication", async (req, res) => {
+app.post("/api/submitJobApplication", async (req, res) => {
   const {
     name,
     address,
@@ -190,7 +190,7 @@ app.get("/api/admin/dashboard", async (req, res) => {
 });
 
 // API endpoint to get nearby addresses
-app.get("/studentSearch", async (req, res) => {
+app.get("/api/studentSearch", async (req, res) => {
   const { lat, lng, distance } = req.query;
   if (!lat || !lng || !distance) {
     return res.status(400).json({

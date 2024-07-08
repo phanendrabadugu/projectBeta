@@ -8,7 +8,7 @@ const AdminSignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/admin/auth/login", {
+      const response = await axios.post("http://localhost:5000/api/admin/auth/login", {
         username,
         password,
       });
